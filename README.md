@@ -1,4 +1,10 @@
 # License-plate-recognition
+运行环境为Pycharm，python3.6版本，曾尝试把程序移植到树莓派上运行，但不知道为什么程序在树莓派上运行会显示error，错误如下：
+
+针对程序中的语句：rect, img = find_license(orgimg)，和contours, hierarchy = cv2.findContours(img, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+
+报错如下：ValueError: too many values to unpack (expected 2)
+
 将车牌从图片中框选出来并裁剪，保存图片，调用百度云API接口（通用文字识别高精度版）进行文字识别。
 
 images存放的是识别的图片，并不是所有图片都能识别成功。文字高精度成功文件夹存放的是识别成功了的文件。
